@@ -60,8 +60,8 @@ body{
 .nav-links{display:flex;gap:36px;list-style:none}
 .nav-links a{
   font-family:var(--font-ui);
-  font-size:13px;font-weight:400;letter-spacing:.08em;
-  color:var(--muted);text-decoration:none;text-transform:uppercase;
+  font-size:13px;font-weight:400;letter-spacing:.06em;
+  color:var(--muted);text-decoration:none;
   transition:color .3s;
 }
 .nav-links a:hover,.nav-links a.active{color:var(--wine)}
@@ -285,7 +285,7 @@ body{
   font-family:var(--font-display);font-size:1.8rem;font-weight:600;
   color:var(--ink);margin-bottom:18px;position:relative;
 }
-.role-card p{font-size:1.35rem;color:var(--muted);line-height:1.75;position:relative}
+.role-card p{font-size:1.15rem;color:var(--muted);line-height:1.75;position:relative}
 .role-card-full{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);color:var(--ink);
   backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
@@ -298,7 +298,7 @@ body{
   background:var(--wine);border-radius:4px 0 0 4px;
 }
 .role-card-full h4{color:var(--ink);font-size:1.8rem}
-.role-card-full p{color:var(--muted);font-size:1.35rem}
+.role-card-full p{color:var(--muted);font-size:1.15rem}
 .role-card-full .role-card-num{color:rgba(31,26,20,.04)}
 
 /* ========================================
@@ -413,6 +413,70 @@ body{
   color:var(--muted);text-transform:uppercase;margin-top:6px
 }
 
+/* 自媒体 two-point cards */
+.media-identity{
+  display:flex;align-items:center;gap:12px;margin-bottom:28px;
+}
+.media-identity-name{
+  font-family:var(--font-ui);font-size:15px;font-weight:500;letter-spacing:.04em;
+  color:var(--muted);
+}
+.media-intro{
+  font-family:var(--font-display);font-size:1.9rem;font-weight:500;
+  color:var(--ink);margin-bottom:36px;
+}
+.media-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.media-card{
+  background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);
+  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
+  border-radius:16px;padding:38px 36px;position:relative;overflow:hidden;
+  box-shadow:0 8px 32px rgba(31,26,20,.06);
+  display:flex;flex-direction:column;gap:16px;
+}
+.media-card-num{
+  font-family:var(--font-display);font-size:2.6rem;font-weight:500;color:var(--wine);line-height:1;
+}
+.media-card h4{
+  font-family:var(--font-display);font-size:1.85rem;font-weight:600;color:var(--ink);
+}
+.media-card p{font-size:1.2rem;color:var(--muted);line-height:1.8}
+.media-stats{display:flex;gap:28px;padding:4px 0}
+.media-stat{
+  font-size:1.15rem;color:var(--muted);
+  display:flex;align-items:baseline;gap:6px;
+}
+.media-stat b{
+  font-family:var(--font-display);font-size:2rem;font-weight:600;color:var(--wine);line-height:1;
+}
+.media-apply{
+  margin-top:auto;
+  padding-top:18px;
+  border-top:1px solid rgba(31,26,20,.12);
+}
+.media-apply-label{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--font-ui);font-size:10px;font-weight:600;
+  letter-spacing:.2em;color:var(--sage);text-transform:uppercase;
+  margin-bottom:12px;
+}
+.media-apply-label::after{
+  content:'';flex:1;height:1px;background:rgba(54,85,72,.2);
+}
+.media-apply p{font-size:1.1rem;color:var(--muted);line-height:1.8}
+.media-callout{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:4px 0;
+}
+.media-callout::before{
+  content:'\201C';
+  font-family:var(--font-display);
+  font-size:2.4rem;line-height:.8;
+  color:var(--gold);opacity:.6;
+}
+.media-callout p{
+  flex:1;font-size:1.3rem;color:var(--wine);line-height:1.85;
+}
+
 /* ========================================
    SKILLS
    ======================================== */
@@ -508,6 +572,7 @@ body{
   .insight-grid{grid-template-columns:1fr}
   .steps-row{grid-template-columns:repeat(2,1fr)}
   .bili-card{grid-template-columns:1fr;padding:32px}
+  .media-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr;gap:32px}
   .contact-grid{grid-template-columns:1fr}
   .edu-card{grid-template-columns:1fr;padding:32px}
@@ -530,7 +595,8 @@ body{
   <ul class="nav-links">
     <li><a href="#hero" class="active">首页</a></li>
     <li><a href="#role">岗位理解</a></li>
-    <li><a href="#projects">项目</a></li>
+    <li><a href="#vibecoding">VibeCoding</a></li>
+    <li><a href="#media">自媒体</a></li>
     <li><a href="#contact">联系方式</a></li>
   </ul>
 </nav>
@@ -552,7 +618,7 @@ body{
       </p>
       <div class="hero-rule reveal reveal-d2"></div>
       <div class="hero-badge-row reveal reveal-d3">
-        <span class="hero-badge">三段实习</span>
+        <span class="hero-badge">四段实习</span>
         <span class="hero-badge wine">MySQL</span>
         <span class="hero-badge">AI工具</span>
         <span class="hero-badge">自媒体经历</span>
@@ -576,7 +642,7 @@ body{
 <section class="section" id="role" style="background:rgba(255,255,255,.25)">
   <div class="section-eyebrow reveal">Role Insight</div>
   <h2 class="section-title reveal reveal-d1">岗位理解</h2>
-  <p class="section-subtitle reveal reveal-d2">3段实习中对内容运营岗位的思考与方法沉淀。</p>
+  <p class="section-subtitle reveal reveal-d2">4段实习中对内容运营岗位的思考与方法沉淀。</p>
 
   <div class="role-grid reveal reveal-d3" style="margin-top:48px">
     <div class="role-card">
@@ -607,22 +673,16 @@ body{
   </div>
 </section>
 
-<!-- ======== 5. PROJECTS ======== -->
-<section class="section" id="projects" style="background:rgba(255,255,255,.35)">
-  <div class="section-eyebrow reveal">Projects</div>
-  <h2 class="section-title reveal reveal-d1">项目经历</h2>
+<!-- ======== 3. VIBE CODING ======== -->
+<section class="section" id="vibecoding" style="background:rgba(255,255,255,.35)">
+  <div class="section-eyebrow reveal">Vibe Coding</div>
+  <h2 class="section-title reveal reveal-d1">VibeCoding项目</h2>
 
-  <!-- 第一部分：Vibe Coding -->
   <div class="project-feature reveal reveal-d2" style="margin-top:32px">
-    <div class="project-group-title">
-      <span class="group-index">Part 01</span>
-      <span>Vibe Coding</span>
-    </div>
     <div class="project-hero-card">
       <div class="project-hero-left">
         <div class="project-label-row">
           <span class="project-label-tag">Vibe Coding</span>
-          <span class="fig-label">2026.07 — 2026.08</span>
         </div>
         <div class="project-hero-title">飞鸟记</div>
         <p class="project-hero-desc">
@@ -678,44 +738,60 @@ body{
       </div>
     </div>
 
-    <!-- 第二部分：自媒体 -->
-    <div class="project-group-title">
-      <span class="group-index">Part 02</span>
-      <span>自媒体</span>
+  </div>
+</section>
+
+<!-- ======== 4. 自媒体 ======== -->
+<section class="section" id="media" style="background:rgba(255,255,255,.35)">
+  <div class="section-eyebrow reveal">WE MEDIA</div>
+  <h2 class="section-title reveal reveal-d1">自媒体</h2>
+
+  <div class="project-feature reveal reveal-d2" style="margin-top:32px">
+    <!-- 身份标注 -->
+    <div class="media-identity">
+      <span class="project-label-tag" style="border-color:var(--wine);color:var(--wine)">Content Creator</span>
+      <span class="media-identity-name">小恬yy · B站影视创作</span>
     </div>
 
-    <!-- B站项目 -->
-    <div class="bili-card reveal reveal-d5">
-      <div class="bili-left">
-        <div class="project-label-row">
-          <span class="project-label-tag" style="border-color:var(--wine);color:var(--wine)">Content Creator</span>
-          <span class="fig-label">2026.02 — 2026.04</span>
+    <!-- 引入句 -->
+    <p class="media-intro">除了切片外，我还做了这些事情：</p>
+
+    <!-- 两个要点 -->
+    <div class="media-grid">
+      <div class="media-card reveal reveal-d3">
+        <div class="media-card-num">01</div>
+        <h4>流量题材分析</h4>
+        <p>关注平台上影视内容常见形式：切片、人物剪辑、剧情解说等，分析其创作成本和流量潜力。</p>
+        <div class="media-callout">
+          <p>这使我明确平台专区内能火的题材类型，以及不同阶段的创作者适合什么样的内容方向。</p>
         </div>
-        <h3>小恬yy</h3>
-        <div class="bili-channel">B站影视创作</div>
-        <p>
-          从UGC创作者视角拆解电影切片、配乐剪辑和AI二创等内容形式，评估流量潜力与创作成本，确定"电影切片+二创剪辑"方向。对标优秀作品优化标题、封面和剪辑节奏。
-        </p>
+        <div class="media-apply">
+          <span class="media-apply-label">应用</span>
+          <p>在虎扑对接创作者的时候，我就整理出社区里有流量的内容题材，匹配相应的创作者。</p>
+        </div>
       </div>
-      <div class="bili-stats">
-        <div class="bili-stat">
-          <div class="bili-stat-num">+90%</div>
-          <div class="bili-stat-label">点赞率提升</div>
+
+      <div class="media-card reveal reveal-d4">
+        <div class="media-card-num">02</div>
+        <h4>优质内容对标</h4>
+        <p>我先后发布了同一电影角色的剪辑，后者经对标同类型内容优化配乐风格。</p>
+        <div class="media-stats">
+          <span class="media-stat">点赞率 <b>+90%</b></span>
+          <span class="media-stat">收藏数 <b>4×</b></span>
         </div>
-        <div class="bili-stat">
-          <div class="bili-stat-num">4×</div>
-          <div class="bili-stat-label">收藏数增长</div>
+        <div class="media-callout">
+          <p>这证明我能观察优秀作品的风格。</p>
         </div>
-        <div class="bili-stat">
-          <div class="bili-stat-num">8k+</div>
-          <div class="bili-stat-label">平均播放量</div>
+        <div class="media-apply">
+          <span class="media-apply-label">应用</span>
+          <p>在虎扑，我注意到观点性的内容更能引发讨论、实现内容增长，所以引入创作者时，我优先引入那些能归因判断的作者。</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======== 3. CONTACT ======== -->
+<!-- ======== 5. CONTACT ======== -->
 <section class="section" id="contact">
   <div class="section-eyebrow reveal">Contact</div>
   <h2 class="section-title reveal reveal-d1">联系方式</h2>
