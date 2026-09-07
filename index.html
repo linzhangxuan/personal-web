@@ -37,7 +37,7 @@ body{
 }
 /* iOS 26 玻璃背景光斑 */
 .bg-orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bg-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
+.bg-orb{position:absolute;border-radius:50%;opacity:.5}
 .bg-orb-1{width:520px;height:520px;top:-140px;left:-120px;background:radial-gradient(circle,rgba(181,144,92,.35),transparent 70%)}
 .bg-orb-2{width:560px;height:560px;top:20%;right:-160px;background:radial-gradient(circle,rgba(122,46,46,.22),transparent 70%)}
 .bg-orb-3{width:480px;height:480px;bottom:8%;left:22%;background:radial-gradient(circle,rgba(54,85,72,.20),transparent 70%)}
@@ -51,8 +51,8 @@ body{
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 64px;
   background:rgba(241,233,217,0.55);
-  backdrop-filter:blur(24px) saturate(180%);
-  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
   border-bottom:1px solid rgba(255,255,255,.5);
   transition:box-shadow .3s;
 }
@@ -261,7 +261,6 @@ body{
 .role-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:84px;position:relative;z-index:2;max-width:1080px;margin:0 auto}
 .role-card{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   border-radius:20px;padding:40px 36px;transition:all .35s ease;
   position:relative;overflow:hidden;
   box-shadow:0 8px 32px rgba(31,26,20,.08);
@@ -288,7 +287,6 @@ body{
 .role-card p{font-size:1.15rem;color:var(--muted);line-height:1.75;position:relative}
 .role-card-full{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);color:var(--ink);
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   padding:40px 36px;border-radius:20px;
   aspect-ratio:4/3;
   box-shadow:0 8px 32px rgba(31,26,20,.08);
@@ -320,7 +318,6 @@ body{
 .project-hero-card{
   display:grid;grid-template-columns:1fr 1fr;gap:64px;
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);border-radius:16px;
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   padding:56px;margin-bottom:48px;align-items:center;
   box-shadow:0 8px 32px rgba(31,26,20,.06);
 }
@@ -360,7 +357,6 @@ body{
 .insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
 .insight-card{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);border-radius:16px;
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   padding:36px 32px;transition:all .35s ease;
   box-shadow:0 8px 32px rgba(31,26,20,.06);
 }
@@ -376,7 +372,6 @@ body{
 .steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .step-card{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);border-radius:16px;
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   padding:32px 24px;text-align:center;transition:all .35s ease;
   box-shadow:0 8px 32px rgba(31,26,20,.06);
 }
@@ -394,7 +389,6 @@ body{
    ======================================== */
 .bili-card{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);border-radius:16px;
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   padding:48px 56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
   box-shadow:0 8px 32px rgba(31,26,20,.06);
 }
@@ -428,7 +422,6 @@ body{
 .media-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .media-card{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   border-radius:16px;padding:38px 36px;position:relative;overflow:hidden;
   box-shadow:0 8px 32px rgba(31,26,20,.06);
   display:flex;flex-direction:column;gap:16px;
@@ -520,7 +513,6 @@ body{
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2}
 .contact-card{
   background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);border-radius:16px;
-  backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
   padding:32px;text-align:center;transition:all .35s ease;
   box-shadow:0 8px 32px rgba(31,26,20,.06);
 }
@@ -595,7 +587,6 @@ body{
   <ul class="nav-links">
     <li><a href="#hero" class="active">首页</a></li>
     <li><a href="#role">岗位理解</a></li>
-    <li><a href="#ai">AI提效</a></li>
     <li><a href="#vibecoding">VibeCoding</a></li>
     <li><a href="#media">自媒体</a></li>
     <li><a href="#contact">联系方式</a></li>
@@ -675,11 +666,6 @@ body{
       <div class="role-card-num">06</div>
       <h4>二次传播</h4>
       <p>用户消费内容的渠道不仅仅是SEO，更多的是UGC平台其他用户的传播分享。我在虎扑实习期间非常重视用户作品二次传播的作用，活动上线时，设置早鸟奖励，在活动初期积累足量作品作为首页推荐。</p>
-    </div>
-    <div class="role-card role-card-full">
-      <div class="role-card-num">07</div>
-      <h4>流程化运营</h4>
-      <p>对接喜马拉雅平台创作者时，将创作者端流程细分：（接单、审核、发布更新），这样在创作者运营时，更明确创作者卡点并针对性解决。</p>
     </div>
   </div>
 </section>
