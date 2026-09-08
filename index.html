@@ -300,6 +300,36 @@ body{
 .role-card-full .role-card-num{color:rgba(31,26,20,.04)}
 
 /* ========================================
+   AGENT SKILL — 搭建流程
+   ======================================== */
+.skill-flow{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:48px;
+  max-width:980px;margin:60px auto 0;position:relative;z-index:2;
+}
+.skill-flow::before{
+  content:'';position:absolute;top:24px;left:16.666%;right:16.666%;
+  height:1px;
+  background:linear-gradient(90deg,rgba(31,26,20,0),rgba(31,26,20,.2),rgba(31,26,20,0));
+}
+.skill-step{text-align:center;padding:0 6px}
+.skill-node{
+  width:48px;height:48px;border-radius:50%;
+  border:1px solid #B23A3A;
+  background:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:1.05rem;color:#B23A3A;
+  margin:0 auto 22px;position:relative;z-index:1;
+  box-shadow:0 0 0 6px rgba(241,233,217,.55);
+}
+.skill-step h4{
+  font-family:var(--font-display);font-size:1.55rem;font-weight:600;
+  color:var(--ink);margin:0 0 12px;
+}
+.skill-step p{font-size:1.05rem;color:var(--muted);line-height:1.75;margin:0;text-wrap:balance}
+.hero-logo-row{display:flex;align-items:center;gap:12px;margin-top:20px}
+.hero-logo{width:42px;height:42px;border-radius:10px;object-fit:cover;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+
+/* ========================================
    PROJECT: 飞鸟记
    ======================================== */
 .project-feature{position:relative;z-index:2}
@@ -566,6 +596,8 @@ body{
   .bili-card{grid-template-columns:1fr;padding:32px}
   .media-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr;gap:32px}
+  .skill-flow{grid-template-columns:1fr;gap:40px}
+  .skill-flow::before{display:none}
   .contact-grid{grid-template-columns:1fr}
   .edu-card{grid-template-columns:1fr;padding:32px}
 }
@@ -588,6 +620,7 @@ body{
     <li><a href="#hero" class="active">首页</a></li>
     <li><a href="#role">岗位理解</a></li>
     <li><a href="#vibecoding">VibeCoding</a></li>
+    <li><a href="#ai">Agent Skill</a></li>
     <li><a href="#media">自媒体</a></li>
     <li><a href="#contact">联系方式</a></li>
   </ul>
@@ -614,6 +647,10 @@ body{
         <span class="hero-badge wine">MySQL</span>
         <span class="hero-badge">AI工具</span>
         <span class="hero-badge">自媒体经历</span>
+      </div>
+      <div class="hero-logo-row reveal reveal-d4">
+        <img class="hero-logo" src="assets/hupu-icon.jpg" alt="虎扑">
+        <img class="hero-logo" src="assets/kuaikan-icon.jpg" alt="快看漫画">
       </div>
 <div class="hero-scroll reveal reveal-d5">
         <span>Scroll</span><div class="hero-scroll-arrow"></div>
@@ -738,7 +775,32 @@ body{
   </div>
 </section>
 
-<!-- ======== 4. 自媒体 ======== -->
+<!-- ======== 4. Agent Skill ======== -->
+<section class="section" id="ai" style="background:rgba(255,255,255,.3)">
+  <div class="section-eyebrow reveal">Agent Skill</div>
+  <h2 class="section-title reveal reveal-d1">Agent Skill</h2>
+  <p class="section-subtitle reveal reveal-d2">在工作过程中，我会通过AI处理一些执行类工作。</p>
+
+  <div class="skill-flow reveal reveal-d3">
+    <div class="skill-step">
+      <span class="skill-node">01</span>
+      <h4>需求分析</h4>
+      <p>整理实习过程中高频出现<br>且简单重复的各种类型</p>
+    </div>
+    <div class="skill-step">
+      <span class="skill-node">02</span>
+      <h4>梳理SOP</h4>
+      <p>明确给AI的输入以及<br>需要AI怎样的输出结果</p>
+    </div>
+    <div class="skill-step">
+      <span class="skill-node">03</span>
+      <h4>验证再搭建</h4>
+      <p>让agent先执行无误<br>后，再搭建skill</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======== 5. 自媒体 ======== -->
 <section class="section" id="media" style="background:rgba(255,255,255,.35)">
   <div class="section-eyebrow reveal">WE MEDIA</div>
   <h2 class="section-title reveal reveal-d1">自媒体</h2>
@@ -788,7 +850,7 @@ body{
   </div>
 </section>
 
-<!-- ======== 5. CONTACT ======== -->
+<!-- ======== 6. CONTACT ======== -->
 <section class="section" id="contact">
   <div class="section-eyebrow reveal">Contact</div>
   <h2 class="section-title reveal reveal-d1">联系方式</h2>
